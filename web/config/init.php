@@ -1,15 +1,17 @@
 <?php
 
-
-    define("DEBUG", 1); // 0 - Prod.
+    define("DEBUG", 0); // 0 - Prod.
 
     define("ROOT", dirname(__DIR__));
     define("WWW", ROOT. "/public");
     define("APP", ROOT. "/app");
     define("CORE", ROOT. "/core");
     define("HELPERS", ROOT. "/core/helpers");
+
     define("CACHE", ROOT. "/var/cache");
-    define("LOG", ROOT. "/var/log");
+    define("LOGS", ROOT. "/var/log");
+    define("PERMISSION_VAR", 0777);
+
     define("CONFIG", ROOT. "/config");
     define("LAYOUT", ROOT. "/shop1");
     define("PATH", ROOT. "http://localhost");

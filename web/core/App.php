@@ -8,6 +8,7 @@
 
         public function __construct()
         {
+            new ErrorHandler();
             self::$container = Container::getInstance();
             $this->getParams();
         }

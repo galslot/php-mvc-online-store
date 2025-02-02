@@ -11,12 +11,8 @@ require_once dirname(__DIR__) . '/config/init.php';
 
 new App();
 
-var_dump(App::$container->getProps());
-
-echo App::$container->getProp("pagination");
-
 App::$container->setProp("test", "TEST");
 
 
-
+throw new Exception('Возникла ошибочка', 404);
 
