@@ -1,0 +1,53 @@
+##
+services:
+   php8:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+      target: base
+      #target: build
+      args:
+        UID: 1000
+        GID: 1000
+    environment:
+      SERVICE_NAME: php-app
+      SERVICE_TAGS: dev
+    volumes:
+      - ./:/var/www/html
+    ports:
+      - "80:80"
+      - "8080:8080"
+    networks:
+      - webnet8
+
+   db8:
+    image: mysql:latest
+    volumes:
+      - mysqldata_part:/var/lib/mysql/
+    environment:
+      MYSQL_ROOT_PASSWORD: 123456
+      MYSQL_DATABASE: webformyself_php8
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: 123456
+    ports:
+      - "3306:3306"
+      - "2222:22"
+    networks:
+      - webnet8
+
+   phpmyadmin8:
+    image: phpmyadmin/phpmyadmin:latest
+    ports:
+     - "9000:80"
+    environment:
+     PMA_HOST: db8
+     MYSQL_ROOT_PASSWORD: 123456
+    networks:
+      - webnet8
+
+networks:
+  # Network for your internals, use it by default:
+  webnet8:
+
+volumes:
+  mysqldata_part:
