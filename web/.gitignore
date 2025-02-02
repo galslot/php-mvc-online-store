@@ -36,6 +36,14 @@ tests/_support/_generated
 # vagrant folder
 /.vagrant
 
+###> ###
+/var
+###< ###
+
+###> ###
+# public uploads dir
+/public/uploads
+###< ###
 
 ###> ###
 /.env.local
