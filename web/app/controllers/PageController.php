@@ -1,16 +1,16 @@
 <?php
 
-    namespace app\controllers;
+namespace app\controllers;
 
-    class PageController
+class PageController
+{
+    public function indexAction()
     {
-        public function indexAction()
-        {
-            echo __METHOD__;
-        }
-
-        public function viewAction()
-        {
-            echo __METHOD__;
-        }
+        echo __METHOD__;
     }
+
+    public function viewAction()
+    {
+        echo __METHOD__;
+    }
+}

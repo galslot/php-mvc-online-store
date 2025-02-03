@@ -1,16 +1,16 @@
 <?php
 
-    namespace app\controllers;
+namespace app\controllers;
 
-    class MainController
+class MainController
+{
+    public function __construct(array $route = [])
     {
-        public function __construct(array $route = [])
-        {
 
-        }
-
-        public function indexAction()
-        {
-            echo __METHOD__;
-        }
     }
+
+    public function indexAction()
+    {
+        echo __METHOD__;
+    }
+}
