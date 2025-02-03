@@ -1,8 +1,8 @@
 <?php
 
     return [
-      "adminEmail" => "admin@localhost",
-      "siteName" => "Internet Shopping",
+      "admin_email" => "admin@localhost",
+      "site_name" => "Internet Shopping",
       "pagination" => 5,
 
     ];

@@ -1,10 +1,13 @@
 <?php
+    use core\ErrorHandler;
+
     /**
-     * @var $errno \wfm\ErrorHandler
-     * @var $errstr \wfm\ErrorHandler
-     * @var $errfile \wfm\ErrorHandler
-     * @var $errline \wfm\ErrorHandler
+     * @var $errno ErrorHandler
+     * @var $errstr ErrorHandler
+     * @var $errfile ErrorHandler
+     * @var $errline ErrorHandler
      */
+
 ?>
 <!doctype html>
 <html lang="en">

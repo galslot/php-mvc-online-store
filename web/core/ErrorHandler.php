@@ -2,8 +2,6 @@
 
     namespace core;
 
-    use JetBrains\PhpStorm\NoReturn;
-
     class ErrorHandler
     {
         public function __construct()
@@ -14,10 +12,14 @@
                 error_reporting(0);
             }
 
+            # пользовательский обработчик исключений
             set_exception_handler([$this, 'exceptionHandler']);
+            # пользовательский обработчик ошибок
             set_error_handler([$this, 'errorHandler']);
 
-            ob_start(); # Включение буферизации
+            # Включение буферизации
+            ob_start();
+            # shutdownFatalErrorHandler - выполнится при завершении работы скрипта
             register_shutdown_function([$this, 'shutdownFatalErrorHandler']);
         }
 
@@ -35,12 +37,12 @@
             if (!empty($error) AND $error['type'] & ( E_ERROR | E_PARSE | E_COMPILE_ERROR | E_CORE_ERROR))
             {
                 $this->logError($error['message'], $error['file'], $error['line']);
-                // очищаем буффер (не выводим стандартное сообщение об ошибке)
+                # очищаем буфер (не выводим стандартное сообщение об ошибке)
                 ob_end_clean();
 
                 $this->displayError($error['type'], $error['message'], $error['file'], $error['line']);
             }else{
-                // отправка (вывод) буфера и его отключение
+                # отправка (вывод) буфера и его отключение
                 ob_end_flush();
             }
         }
@@ -56,11 +58,11 @@
             );
         }
 
-        protected function logError($message = '', $file = '', $line = 0): void
+        protected function logError($message = '', $file = '', $line = ''): void
         {
             if(!is_dir(LOGS)){
                 if (!mkdir(LOGS, PERMISSION_VAR, true)) {
-                    die('Не удалось создать директорию.');
+                    die('Не удалось создать директорию для логов.');
                 }
             }
 
@@ -70,15 +72,15 @@
             );
         }
 
-        protected function displayError($errno, $errstr, $errfile, $errline, $responce = 500): void
+        protected function displayError($errno, $errstr, $errfile, $errline, $response = 500): void
         {
-            if($responce == 0){
-                $responce = 404;
+            if($response == 0){
+                $response = 404;
             }
 
-            http_response_code($responce);
+            http_response_code($response);
 
-            if($responce == 404 && !DEBUG){
+            if($response == 404 && !DEBUG){
                 require_once WWW. '/err/404.php';
                 die();
             }

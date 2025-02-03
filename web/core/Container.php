@@ -8,12 +8,12 @@
 
         protected static array $props = [];
 
-        public static function setProp(string $key, $value): void
+        public static function setProp(int|string $key, $value): void
         {
             self::$props[$key] = $value;
         }
 
-        public static function getProp(string $key)
+        public static function getProp(int|string $key)
         {
             return self::$props[$key] ?? null;
         }

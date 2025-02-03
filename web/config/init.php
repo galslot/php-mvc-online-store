@@ -1,6 +1,6 @@
 <?php
 
-    define("DEBUG", 0); // 0 - Prod.
+    define("DEBUG", 1); // 0 - Prod.
 
     define("ROOT", dirname(__DIR__));
     define("WWW", ROOT. "/public");
@@ -14,8 +14,8 @@
 
     define("CONFIG", ROOT. "/config");
     define("LAYOUT", ROOT. "/shop1");
-    define("PATH", ROOT. "http://localhost");
-    define("ADMIN", ROOT. "http://localhost/admin");
+    define("HOME_PAGE", "http://localhost");
+    define("ADMIN", "http://localhost/admin");
     define("UPLOADS", ROOT. "/public/uploads");
     define("NO_IMAGE", "uploads/no_image.jpg");
 

@@ -12,7 +12,9 @@ require_once dirname(__DIR__) . '/config/init.php';
 new App();
 
 App::$container->setProp("test", "TEST");
+var_dump(App::$container->getProps());
 
+//throw new Exception('Возникла ошибочка', 404);
 
-throw new Exception('Возникла ошибочка', 404);
+echo $test;
 
