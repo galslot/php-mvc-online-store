@@ -54,7 +54,11 @@ class Router
             throw new \Exception("Контроллер {$controller} не найден.", 404);
         }
 
+        /** @var Controller $controllerObject */
         $controllerObject = new $controller(self::$route);
+
+        $controllerObject->getModel();
+
         $action = self::lowerNameCamelCase(self::$route['action']). 'Action';
 
         if(!method_exists($controllerObject, $action)) {
