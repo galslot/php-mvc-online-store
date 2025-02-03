@@ -7,14 +7,14 @@ if(PHP_MAJOR_VERSION < 8){
 }
 
 require_once dirname(__DIR__) . '/config/init.php';
-
+require_once HELPERS . '/func.php';
+require_once CONFIG . '/routes.php';
 
 new App();
-
 App::$container->setProp("test", "TEST");
-var_dump(App::$container->getProps());
+
 
 //throw new Exception('Возникла ошибочка', 404);
 
-echo $test;
+dd(\core\Router::getRoutes());
 
