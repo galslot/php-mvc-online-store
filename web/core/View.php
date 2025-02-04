@@ -20,7 +20,7 @@ class View
         }
     }
 
-    public function render($data)
+    public function render($data): void
     {
         if(is_array($data)){
             extract($data);
@@ -59,6 +59,20 @@ class View
         return $out_meta;
     }
 
+    public function getEmbed($file, $data = null): void
+    {
+        if(is_array($data)){
+            extract($data);
+        }
+
+        $fileEmbed = VIEWS . "/_embed/". $file. ".php";
+        if(!is_file($fileEmbed)){
+            throw new \Exception("Не найден {$fileEmbed}", 500);
+        }
+
+        require $fileEmbed;
+    }
+
     public function isDebug(): bool
     {
         if(DEBUG) return true;
@@ -67,19 +81,26 @@ class View
 
     public function getDbLogs(): void
     {
-        if($this->isDebug()){
-            $logs = R::getDatabaseAdapter()
-                ->getDatabase()
-                ->getLogger();
+        if(!$this->isDebug()) return;
 
-            $logs = array_merge(
-                $logs->grep( 'SELECT' ), $logs->grep( 'select' ),
-                $logs->grep( 'UPDATE' ), $logs->grep( 'update' ),
-                $logs->grep( 'DELETE' ), $logs->grep( 'delete' ),
-                $logs->grep( 'INSERT' ), $logs->grep( 'insert' ),
-            );
+        $logs = R::getDatabaseAdapter()
+            ->getDatabase()
+            ->getLogger();
 
-            dd($logs);
-        }
+        $logs = array_merge(
+            $logs->grep( 'SELECT' ), $logs->grep( 'select' ),
+            $logs->grep( 'UPDATE' ), $logs->grep( 'update' ),
+            $logs->grep( 'DELETE' ), $logs->grep( 'delete' ),
+            $logs->grep( 'INSERT' ), $logs->grep( 'insert' ),
+        );
+
+        dd($logs);
+    }
+
+    public function getRouteLog(): void
+    {
+        if(!$this->isDebug()) return;
+
+        dd($this->route);
     }
 }

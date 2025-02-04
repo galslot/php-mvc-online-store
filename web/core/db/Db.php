@@ -22,8 +22,8 @@ class Db
         R::freeze(true);
 
         if(DEBUG){
-            // включает отладку (рекомендуемый способ)
-            R::fancyDebug( TRUE );
+            // включает отладку
+            R::debug( TRUE, 1 ); //select mode 1 to suppress screen output
         }
 
     }

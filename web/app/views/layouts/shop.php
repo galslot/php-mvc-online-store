@@ -1,23 +1,5 @@
-<!doctype html>
-    <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <?=$this->getMeta() ?>
-</head>
-<body>
+<?php $this->getEmbed('_header') ?>
 
 <?=$this->content ?>
 
-<?php if($this->isDebug()): ?>
-    <br />
-    <hr />
-     <?php $this->getDbLogs() ?>
-    <br />
-    <hr />
-    <br />
-<?php endif; ?>
-</body>
-</html>
+<?php $this->getEmbed('_footer') ?>

@@ -12,7 +12,6 @@ abstract class Controller
 
     public function __construct(public $route = [])
     {
-        dd($this->route);
     }
 
     public function getModel(): void
