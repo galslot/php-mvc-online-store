@@ -16,5 +16,5 @@ App::$container->setProp("test", "TEST");
 
 //throw new Exception('Возникла ошибочка', 404);
 
-dd(\core\Router::getRoutes());
+
 

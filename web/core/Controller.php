@@ -12,6 +12,7 @@ abstract class Controller
 
     public function __construct(public $route = [])
     {
+        dd($this->route);
     }
 
     public function getModel(): void
@@ -25,6 +26,7 @@ abstract class Controller
     public function getView(): void
     {
         $this->view = $this->view ?: $this->route['action'];
+        (new View($this->route, $this->layout, $this->view, $this->meta))->render($this->data);
     }
 
     public function set($data): void

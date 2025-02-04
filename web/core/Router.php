@@ -66,6 +66,7 @@ class Router
         }
 
         $controllerObject->$action();
+        $controllerObject->getView();
     }
 
     public static function matchRoute($query): bool
@@ -91,11 +92,9 @@ class Router
                 $route['controller'] = self::upNameCamelCase($route['controller']);
                 self::$route = $route;
 
-                dd($query);
                 return true;
             }
         }
-
         return false;
     }
 

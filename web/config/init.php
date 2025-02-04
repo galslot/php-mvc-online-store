@@ -7,13 +7,15 @@ define("WWW", ROOT. "/public");
 define("APP", ROOT. "/app");
 define("CORE", ROOT. "/core");
 define("HELPERS", ROOT. "/core/helpers");
+define("VIEWS", ROOT. "/app/views");
+define("LAYOUT_DIR", ROOT. "/app/views/layouts");
 
 define("CACHE", ROOT. "/var/cache");
 define("LOGS", ROOT. "/var/log");
 define("PERMISSION_VAR", 0777);
 
 define("CONFIG", ROOT. "/config");
-define("LAYOUT", ROOT. "/shop1");
+define("LAYOUT_NAME", "shop");
 define("HOME_PAGE", "http://localhost");
 define("ADMIN", "http://localhost/admin");
 define("UPLOADS", ROOT. "/public/uploads");

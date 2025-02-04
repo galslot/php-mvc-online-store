@@ -7,11 +7,10 @@ use core\Controller;
 class MainController extends Controller
 {
 
+    //public string|false $layout = 'default';
+
     public function indexAction()
     {
-        echo __METHOD__;
-        br();
 
-        var_dump($this->model);
     }
 }
