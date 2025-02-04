@@ -22,9 +22,9 @@ define("UPLOADS", ROOT. "/public/uploads");
 define("NO_IMAGE", "uploads/no_image.jpg");
 
 define("DB_HOST", "db8");
-define("DB_USER", "root");
+define("DB_USER", "admin");
 define("DB_PASS", "123456");
-define("DB_NAME", "framework8");
+define("DB_NAME", "newshop");
 
 require_once ROOT. "/vendor/autoload.php";
 
