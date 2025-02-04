@@ -107,7 +107,7 @@ RUN apk add php82-iconv
 RUN apk add php82-json
 
 RUN docker-php-ext-install fileinfo
-RUN docker-php-ext-install pdo
+#RUN docker-php-ext-install pdo
 RUN docker-php-ext-install xml
 
 RUN apk add php82-zlib
@@ -125,6 +125,13 @@ RUN docker-php-ext-install xmlwriter
 
 RUN apk add php82-xmlreader
 RUN apk add php82-openssl
+
+# MySql
+RUN apk update && apk upgrade
+RUN apk add ca-certificates
+RUN update-ca-certificates
+RUN docker-php-ext-install mysqli pdo pdo_mysql
+RUN docker-php-ext-enable pdo_mysql
 
 ## PHP AMQP
 RUN docker-php-ext-install sockets \
