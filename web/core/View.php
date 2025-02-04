@@ -2,6 +2,8 @@
 
 namespace core;
 
+use RedBeanPHP\R;
+
 class View
 {
     public string $content = '';
@@ -55,5 +57,29 @@ class View
         $out_meta .= '<meta name="description" content="'. hsc($this->meta['description']). '" />'. PHP_EOL;
         $out_meta .= '<meta name="keywords" content="'. hsc($this->meta['keywords']). '" />'. PHP_EOL;
         return $out_meta;
+    }
+
+    public function isDebug(): bool
+    {
+        if(DEBUG) return true;
+        return false;
+    }
+
+    public function getDbLogs(): void
+    {
+        if($this->isDebug()){
+            $logs = R::getDatabaseAdapter()
+                ->getDatabase()
+                ->getLogger();
+
+            $logs = array_merge(
+                $logs->grep( 'SELECT' ), $logs->grep( 'select' ),
+                $logs->grep( 'UPDATE' ), $logs->grep( 'update' ),
+                $logs->grep( 'DELETE' ), $logs->grep( 'delete' ),
+                $logs->grep( 'INSERT' ), $logs->grep( 'insert' ),
+            );
+
+            dd($logs);
+        }
     }
 }

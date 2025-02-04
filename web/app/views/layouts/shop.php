@@ -11,5 +11,13 @@
 
 <?=$this->content ?>
 
+<?php if($this->isDebug()): ?>
+    <br />
+    <hr />
+     <?php $this->getDbLogs() ?>
+    <br />
+    <hr />
+    <br />
+<?php endif; ?>
 </body>
 </html>
