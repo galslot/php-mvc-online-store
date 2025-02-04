@@ -11,6 +11,10 @@ class MainController extends Controller
 
     public function indexAction()
     {
+        $this->setMeta('Главная страница', 'Description...', 'keywords...');
+
+        $names = ['Name1', 'Name2', 'Name3', 'Name4'];
+        $this->set(compact('names'));
 
     }
 }

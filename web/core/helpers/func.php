@@ -10,3 +10,8 @@ function br(): void
 {
     echo '<br />';
 }
+
+function hsc($str): string
+{
+    return htmlspecialchars($str);
+}

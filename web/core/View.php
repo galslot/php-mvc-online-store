@@ -48,4 +48,12 @@ class View
             require_once $layout_file;
         }
     }
+
+    public function getMeta(): string
+    {
+        $out_meta = '<title>'. hsc($this->meta['title']). '</title>'. PHP_EOL;
+        $out_meta .= '<meta name="description" content="'. hsc($this->meta['description']). '" />'. PHP_EOL;
+        $out_meta .= '<meta name="keywords" content="'. hsc($this->meta['keywords']). '" />'. PHP_EOL;
+        return $out_meta;
+    }
 }
