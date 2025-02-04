@@ -4,7 +4,11 @@
 <br>
 
 
-<p><?=$names[0] ?></p>
-<p><?=$names[1] ?></p>
-<p><?=$names[2] ?></p>
+<?php if(!empty($names)): ?>
+    <?php foreach ($names as $name): ?>
+
+        <p><?= $name->id ?> - <?= $name->name ?></p>
+
+    <?php endforeach; ?>
+<?php endif; ?>
 
