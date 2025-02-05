@@ -11,10 +11,3 @@ require_once HELPERS . '/func.php';
 require_once CONFIG . '/routes.php';
 
 new App();
-App::$container->setProp("test", "TEST");
-
-
-//throw new Exception('Возникла ошибочка', 404);
-
-
-
