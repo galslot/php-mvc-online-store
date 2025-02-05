@@ -17,5 +17,8 @@ class MainController extends BaseController
         $slides = R::findAll('slider');
         $this->set(compact('slides'));
 
+        $products = $this->model->getHit(1, 3);
+
+        $this->set(compact('slides', 'products'));
     }
 }
