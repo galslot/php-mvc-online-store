@@ -51,9 +51,14 @@ class View
         }
     }
 
+    public function getParam($nameParameter): string
+    {
+        return App::$container->getProp($nameParameter);
+    }
+
     public function getMeta(): string
     {
-        $out_meta = '<title>'. hsc($this->meta['title']). '</title>'. PHP_EOL;
+        $out_meta = '<title>'. $this->getParam('site_name'). " - ". hsc($this->meta['title']). '</title>'. PHP_EOL;
         $out_meta .= '<meta name="description" content="'. hsc($this->meta['description']). '" />'. PHP_EOL;
         $out_meta .= '<meta name="keywords" content="'. hsc($this->meta['keywords']). '" />'. PHP_EOL;
         return $out_meta;

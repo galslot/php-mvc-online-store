@@ -43,7 +43,7 @@
     <div class="container d-flex justify-content-between align-items-left">
 
         <a class="navbar-brand text-success logo h2 align-self-left" href="<?=HOME_PAGE ?>">
-            Super Shop
+            <?=$this->getParam('site_name') ?>
         </a>
 
         <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#templatemo_main_nav"

@@ -12,7 +12,7 @@ class MainController extends BaseController
 
     public function indexAction(): void
     {
-        $this->setMeta('Главная страница', 'Description...', 'keywords...');
+        $this->setMeta('Главная страница', 'internet shop of digital technology', 'internet shop, digital, electronics');
 
         $slides = R::findAll('slider');
         $this->set(compact('slides'));
