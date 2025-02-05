@@ -28,6 +28,9 @@ abstract class Controller
         }
     }
 
+    /**
+     * @throws \Exception
+     */
     public function getView(): void
     {
         $this->view = $this->view ?: $this->route['action'];

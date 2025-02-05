@@ -2,10 +2,10 @@
 
 namespace app\models;
 
-use app\models\AppBase\BaseModal;
+use app\models\AppBase\BaseModel;
 use RedBeanPHP\R;
 
-class MainModel extends BaseModal
+class MainModel extends BaseModel
 {
     public function getHit($lang = 1, $limit = 3): array
     {

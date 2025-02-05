@@ -44,6 +44,10 @@ class Router
             throw new \Exception("Маршрут не найден.", 404);
         }
 
+        if(!empty(self::$route['lang'])) {
+            App::$container->setProp('lang', self::$route['lang']);
+        }
+
         if(self::$route['admin_pref'] == 'admin'){
             $controller = 'app\\controllers\\admin\\'. self::$route['controller'].'Controller';
         }else{

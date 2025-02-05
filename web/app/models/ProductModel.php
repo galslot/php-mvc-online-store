@@ -2,10 +2,10 @@
 
 namespace app\models;
 
-use app\models\AppBase\BaseModal;
+use app\models\AppBase\BaseModel;
 use RedBeanPHP\R;
 
-class ProductModel extends BaseModal
+class ProductModel extends BaseModel
 {
     public function getProduct($slug, $lang = 1)
     {
