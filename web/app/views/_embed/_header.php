@@ -46,7 +46,9 @@
             Super Shop
         </a>
 
-        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#templatemo_main_nav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#templatemo_main_nav"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+        >
             <span class="navbar-toggler-icon"></span>
         </button>
 
@@ -67,9 +69,6 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Камеры</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="<?php $this->getUrlToRoute(3) ?>">Контакты</a>
                     </li>
                 </ul>
             </div>

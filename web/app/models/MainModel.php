@@ -2,13 +2,9 @@
 
 namespace app\models;
 
-use core\Model;
-use RedBeanPHP\R;
+use app\models\AppBase\BaseModal;
 
-class MainModel extends Model
+class MainModel extends BaseModal
 {
-    public function getNames(): array
-    {
-        return R::findAll("name");
-    }
+
 }
