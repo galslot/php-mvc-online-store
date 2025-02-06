@@ -9,7 +9,7 @@ class LangWidget
     protected $tpl;
     protected $languages; # все языки поддерживаемые
 
-    protected $language;  # активный язык
+    protected $language;  # default language
 
     public function __construct()
     {

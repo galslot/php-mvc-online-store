@@ -106,15 +106,13 @@
 
 <script>
     const HOME_PAGE = '<?=HOME_PAGE ?>';
-
-    console.log(HOME_PAGE);
 </script>
 
 <script src="<?=HOME_PAGE ?>/assets/js/jquery-1.11.0.min.js"></script>
 <script src="<?=HOME_PAGE ?>/assets/js/jquery-migrate-1.2.1.min.js"></script>
 <script src="<?=HOME_PAGE ?>/assets/js/bootstrap.bundle.min.js"></script>
-<script src="<?=HOME_PAGE ?>/assets/js/templatemo.js"></script>
-<script src="<?=HOME_PAGE ?>/assets/js/custom.js"></script>
+<script src="<?=HOME_PAGE ?>/assets/js/templa.js"></script>
+<script src="<?=HOME_PAGE ?>/assets/js/main.js"></script>
 
 </body>
 </html>

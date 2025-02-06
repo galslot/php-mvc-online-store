@@ -4,7 +4,6 @@ namespace app\controllers;
 
 use app\controllers\AppBase\BaseController;
 use app\models\MainModel;
-use RedBeanPHP\R;
 
 /** @property MainModel $model */
 class MainController extends BaseController
@@ -14,7 +13,7 @@ class MainController extends BaseController
     {
         $this->setMeta('Главная страница', 'internet shop of digital technology', 'internet shop, digital, electronics');
 
-        $slides = R::findAll('slider');
+        $slides = $this->model->getSlides();
         $this->set(compact('slides'));
 
         $products = $this->model->getHit(1, 3);

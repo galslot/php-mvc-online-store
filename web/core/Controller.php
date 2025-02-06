@@ -51,4 +51,15 @@ abstract class Controller
         ];
     }
 
+    public function redirect($http = false): void
+    {
+        if($http){
+            $header = $http;
+        }else{
+            $header = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : HOME_PAGE;
+        }
+        header("Location: $header");
+        die();
+    }
+
 }
