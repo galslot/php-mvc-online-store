@@ -99,20 +99,26 @@
     <hr />
     <?php $this->getRouteLog() ?>
     <hr />
+    <?php $this->getAppContainer() ?>
+    <hr />
     <?php $this->getDbLogs() ?>
     <hr />
     <br />
 <?php endif; ?>
 
 <script>
-    const HOME_PAGE = '<?=HOME_PAGE ?>';
+
+    const HOME_PAGE = "<?= HOME_PAGE ?>";
+    const base_url  = "<?= baseUrl() ?>";
+    console.log(HOME_PAGE, base_url);
+
 </script>
 
-<script src="<?=HOME_PAGE ?>/assets/js/jquery-1.11.0.min.js"></script>
-<script src="<?=HOME_PAGE ?>/assets/js/jquery-migrate-1.2.1.min.js"></script>
-<script src="<?=HOME_PAGE ?>/assets/js/bootstrap.bundle.min.js"></script>
-<script src="<?=HOME_PAGE ?>/assets/js/templa.js"></script>
-<script src="<?=HOME_PAGE ?>/assets/js/main.js"></script>
+<script src="<?= HOME_PAGE ?>/assets/js/jquery-1.11.0.min.js"></script>
+<script src="<?= HOME_PAGE ?>/assets/js/jquery-migrate-1.2.1.min.js"></script>
+<script src="<?= HOME_PAGE ?>/assets/js/bootstrap.bundle.min.js"></script>
+<script src="<?= HOME_PAGE ?>/assets/js/templa.js"></script>
+<script src="<?= HOME_PAGE ?>/assets/js/main.js"></script>
 
 </body>
 </html>

@@ -128,4 +128,11 @@ class View
 
         dd($this->route);
     }
+
+    public function getAppContainer(): void
+    {
+        if(!$this->isDebug()) return;
+
+        dd(App::$container->getProps());
+    }
 }

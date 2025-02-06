@@ -15,4 +15,10 @@ class BaseModel extends Model
     {
         return R::getAssoc("SELECT code, title, base, id FROM language ORDER BY base DESC");
     }
+
+    public function getLanguageBase(): string
+    {
+        $base = R::getAssoc("SELECT code, base, id FROM language WHERE base = 1");
+        return key($base);
+    }
 }

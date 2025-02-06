@@ -7,9 +7,9 @@ use core\App;
 class LangWidget
 {
     protected $tpl;
-    protected $languages; # все языки поддерживаемые
+    protected array $languages; # все языки поддерживаемые
 
-    protected $language;  # default language
+    protected $language;  #
 
     public function __construct()
     {
@@ -20,7 +20,7 @@ class LangWidget
     protected function startWidget(): void
     {
         $this->languages = App::$container->getProp('languages');
-        $this->language = App::$container->getProp('language');
+        $this->language  = App::$container->getProp('language');
         echo $this->getHtml();
     }
 
@@ -31,11 +31,12 @@ class LangWidget
     public static function getLanguage($languages)
     {
         $lang = App::$container->getProp('lang');
+        $languageBase = App::$container->getProp('language_base');
 
         if($lang && array_key_exists($lang, $languages)) {
             $key = $lang;
         }elseif(!$lang){
-            $key = key($languages); # default language
+            $key = $languageBase;
         }else{
             return false;
         }

@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <base href="/">
+    <base href="<?=baseUrl() ?>">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="apple-touch-icon" href="assets/img/apple-icon.png">
-    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+    <link rel="apple-touch-icon" href="<?= HOME_PAGE ?>/assets/img/apple-icon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="<?= HOME_PAGE ?>/assets/img/favicon.ico">
 
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/templatemo.css">
-    <link rel="stylesheet" href="assets/css/custom.css">
+    <link rel="stylesheet" href="<?= HOME_PAGE ?>/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="<?= HOME_PAGE ?>/assets/css/templatemo.css">
+    <link rel="stylesheet" href="<?= HOME_PAGE ?>/assets/css/custom.css">
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
-    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+    <link rel="stylesheet" href="<?= HOME_PAGE ?>/assets/css/fontawesome.min.css">
 
     <?=$this->getMeta() ?>
 </head>
@@ -42,7 +42,7 @@
 <nav class="navbar navbar-expand-lg navbar-light shadow">
     <div class="container d-flex justify-content-between align-items-left">
 
-        <a class="navbar-brand text-success logo h2 align-self-left" href="<?=HOME_PAGE ?>">
+        <a class="navbar-brand text-success logo h2 align-self-left" href="<?=baseUrl() ?>">
             <?=$this->getParam('site_name') ?>
         </a>
 
@@ -56,7 +56,7 @@
             <div class="flex-fill">
                 <ul class="nav navbar-nav d-flex justify-content-between mx-lg-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="<?=HOME_PAGE ?>">Главная</a>
+                        <a class="nav-link" href="<?=baseUrl() ?>">Главная</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Компьютеры</a>
