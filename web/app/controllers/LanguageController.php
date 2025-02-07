@@ -3,13 +3,13 @@
 namespace app\controllers;
 
 use app\controllers\AppBase\BaseController;
-use core\App;
+use core\GettingData;
 
 class LanguageController extends BaseController
 {
     public function changeAction(): void
     {
-        $lang = $_GET['lang'] ?? null;
+        $lang = GettingData::get('lang', 's');
 
         if( empty($lang) ||  empty($_SERVER['HTTP_REFERER']) || !array_key_exists($lang, $this->languages) ){
             $this->redirect();

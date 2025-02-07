@@ -36,4 +36,10 @@ class BaseController extends Controller
         App::$container->setProp('language', $language);
     }
 
+    public function getLang(string $key)
+    {
+        $lang = App::$container->getProp('language');
+        return $lang[$key];
+    }
+
 }

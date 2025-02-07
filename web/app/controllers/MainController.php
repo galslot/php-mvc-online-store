@@ -4,6 +4,7 @@ namespace app\controllers;
 
 use app\controllers\AppBase\BaseController;
 use app\models\MainModel;
+use core\App;
 
 /** @property MainModel $model */
 class MainController extends BaseController
@@ -16,7 +17,7 @@ class MainController extends BaseController
         $slides = $this->model->getSlides();
         $this->set(compact('slides'));
 
-        $products = $this->model->getHit(1, 3);
+        $products = $this->model->getHit($this->getLang('id'), 3);
 
         $this->set(compact('slides', 'products'));
     }

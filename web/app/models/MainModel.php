@@ -7,10 +7,10 @@ use RedBeanPHP\R;
 
 class MainModel extends BaseModel
 {
-    public function getHit($lang = 1, $limit = 3): array
+    public function getHit($langId = 1, $limit = 3): array
     {
         return R::getAll("SELECT p.*, pd.* FROM product p JOIN product_description pd ON p.id 
-                 = pd.product_id WHERE p.status = 1 AND p.hit = 1 AND pd.language_id = ? LIMIT ?", [$lang, $limit]);
+                 = pd.product_id WHERE p.status = 1 AND p.hit = 1 AND pd.language_id = ? LIMIT ?", [$langId, $limit]);
     }
 
     public function getSlides(): array
