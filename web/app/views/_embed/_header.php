@@ -55,21 +55,20 @@
         <div class="align-self-left collapse navbar-collapse flex-fill  d-lg-flex justify-content-lg-between" id="templatemo_main_nav">
             <div class="flex-fill">
                 <ul class="nav navbar-nav d-flex justify-content-between mx-lg-auto">
+
                     <li class="nav-item">
-                        <a class="nav-link" href="<?=baseUrl() ?>">Главная</a>
+                        <a class="nav-link" href="#"><?= i18n('tp_computers') ?></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Компьютеры</a>
+                        <a class="nav-link" href="#"><?= i18n('tp_tablets') ?></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Планшеты</a>
+                        <a class="nav-link" href="#"><?= i18n('tp_phones') ?></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Телефоны</a>
+                        <a class="nav-link" href="#"><?= i18n('tp_cameras') ?></a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Камеры</a>
-                    </li>
+
                 </ul>
             </div>
             <div class="navbar align-self-left d-flex">
@@ -98,8 +97,8 @@
                         <i class="far fa-user"></i>
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Вход</a></li>
-                        <li><a class="dropdown-item" href="#">Регистрация</a></li>
+                        <li><a class="dropdown-item" href="#"><?= i18n('tp_login') ?></a></li>
+                        <li><a class="dropdown-item" href="#"><?= i18n('tp_register') ?></a></li>
                     </ul>
                 </div>
 

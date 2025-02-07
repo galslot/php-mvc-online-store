@@ -6,7 +6,7 @@
         </div>
         <form action="" method="get" class="modal-content modal-body border-0 p-0">
             <div class="input-group mb-2">
-                <input type="text" class="form-control" id="inputModalSearch" name="q" placeholder="Search ...">
+                <input type="text" class="form-control" id="inputModalSearch" name="q" placeholder="<?= i18n('tp_search') ?> ...">
                 <button type="submit" class="input-group-text bg-success text-light">
                     <i class="fa fa-fw fa-search text-white"></i>
                 </button>
@@ -20,17 +20,17 @@
     <div class="modal-dialog modal-xl">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Корзина</h5>
+                <h5 class="modal-title" id="exampleModalLabel"><?= i18n('tp_cart') ?></h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <table class="table text-start">
                     <thead>
                     <tr>
-                        <th scope="col">Фото</th>
-                        <th scope="col">Товар</th>
-                        <th scope="col">Кол-во</th>
-                        <th scope="col">Цена</th>
+                        <th scope="col"><?= i18n('tp_photo') ?></th>
+                        <th scope="col"><?= i18n('tp_products') ?></th>
+                        <th scope="col"><?= i18n('tp_quantity') ?></th>
+                        <th scope="col"><?= i18n('tp_price') ?></th>
                     </tr>
                     </thead>
                     <tbody>
@@ -62,8 +62,8 @@
                 </table>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-danger ripple" data-bs-dismiss="modal">Продолжить покупки</button>
-                <button type="button" class="btn btn-primary">Оформить заказ</button>
+                <button type="button" class="btn btn-danger ripple" data-bs-dismiss="modal"><?= i18n('tp_continue_shop') ?></button>
+                <button type="button" class="btn btn-primary"><?= i18n('tp_order') ?></button>
             </div>
         </div>
     </div>

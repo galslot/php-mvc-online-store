@@ -6,6 +6,7 @@ use app\models\AppBase\BaseModel;
 use app\widgets\language\LangWidget;
 use core\App;
 use core\Controller;
+use core\Language;
 
 class BaseController extends Controller
 {
@@ -34,6 +35,8 @@ class BaseController extends Controller
         }
 
         App::$container->setProp('language', $language);
+
+        Language::load($language['code'], $this->route);
     }
 
     public function getLang(string $key)

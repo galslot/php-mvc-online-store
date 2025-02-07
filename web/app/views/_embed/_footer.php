@@ -24,26 +24,22 @@
             </div>
 
             <div class="col-md-4 pt-5">
-                <h2 class="h2 text-light border-bottom pb-3 border-light">Products</h2>
+                <h2 class="h2 text-light border-bottom pb-3 border-light"><?= i18n('tp_categories') ?></h2>
                 <ul class="list-unstyled text-light footer-link-list">
-                    <li><a class="text-decoration-none" href="#">Luxury</a></li>
-                    <li><a class="text-decoration-none" href="#">Sport Wear</a></li>
-                    <li><a class="text-decoration-none" href="#">Men's Shoes</a></li>
-                    <li><a class="text-decoration-none" href="#">Women's Shoes</a></li>
-                    <li><a class="text-decoration-none" href="#">Popular Dress</a></li>
-                    <li><a class="text-decoration-none" href="#">Gym Accessories</a></li>
-                    <li><a class="text-decoration-none" href="#">Sport Shoes</a></li>
+                    <li><a class="text-decoration-none" href="#"><?= i18n('tp_computers') ?></a></li>
+                    <li><a class="text-decoration-none" href="#"><?= i18n('tp_tablets') ?></a></li>
+                    <li><a class="text-decoration-none" href="#"><?= i18n('tp_phones') ?></a></li>
+                    <li><a class="text-decoration-none" href="#"><?= i18n('tp_cameras') ?></a></li>
                 </ul>
             </div>
 
             <div class="col-md-4 pt-5">
-                <h2 class="h2 text-light border-bottom pb-3 border-light">Further Info</h2>
+                <h2 class="h2 text-light border-bottom pb-3 border-light"><?= i18n('tp_further') ?></h2>
                 <ul class="list-unstyled text-light footer-link-list">
-                    <li><a class="text-decoration-none" href="#">Home</a></li>
-                    <li><a class="text-decoration-none" href="#">About Us</a></li>
-                    <li><a class="text-decoration-none" href="#">Shop Locations</a></li>
-                    <li><a class="text-decoration-none" href="#">FAQs</a></li>
-                    <li><a class="text-decoration-none" href="#">Contact</a></li>
+                    <li><a class="text-decoration-none" href="#"><?= i18n('tp_about') ?></a></li>
+                    <li><a class="text-decoration-none" href="#"><?= i18n('tp_locations') ?></a></li>
+                    <li><a class="text-decoration-none" href="#"><?= i18n('tp_faq') ?></a></li>
+                    <li><a class="text-decoration-none" href="#"><?= i18n('tp_contact') ?></a></li>
                 </ul>
             </div>
 
@@ -70,10 +66,10 @@
                 </ul>
             </div>
             <div class="col-auto">
-                <label class="sr-only" for="subscribeEmail">Email address</label>
+                <label class="sr-only" for="subscribeEmail">Email</label>
                 <div class="input-group mb-2">
                     <input type="text" class="form-control bg-dark border-light" id="subscribeEmail" placeholder="Email address">
-                    <div class="input-group-text btn-success text-light">Subscribe</div>
+                    <div class="input-group-text btn-success text-light"><?= i18n('tp_subscribe') ?></div>
                 </div>
             </div>
         </div>
