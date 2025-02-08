@@ -54,22 +54,13 @@
 
         <div class="align-self-left collapse navbar-collapse flex-fill  d-lg-flex justify-content-lg-between" id="templatemo_main_nav">
             <div class="flex-fill">
-                <ul class="nav navbar-nav d-flex justify-content-between mx-lg-auto">
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><?= i18n('tp_computers') ?></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><?= i18n('tp_tablets') ?></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><?= i18n('tp_phones') ?></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><?= i18n('tp_cameras') ?></a>
-                    </li>
+                <?php new \app\widgets\menu\MenuWidget([
+                    'class' => 'nav navbar-nav d-flex justify-content-between mx-lg-auto',
+                    'cache_expire' => 30,
+                    'attrs' => ['id' => 'widget_menu_tpl'],
+                ]) ?>
 
-                </ul>
             </div>
             <div class="navbar align-self-left d-flex">
                 <div class="d-lg-none flex-sm-fill mt-3 mb-4 col-7 col-sm-auto pr-3">
