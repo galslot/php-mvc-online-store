@@ -45,4 +45,16 @@ class BaseController extends Controller
         return $lang[$key];
     }
 
+    public function isAjaxRequest(): bool
+    {
+        if(isset($_SERVER['HTTP_X_REQUESTED_WITH']) && !empty($_SERVER['HTTP_X_REQUESTED_WITH'])
+            && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest')
+        {
+            // Если Ajax запрос
+            return true;
+        }
+        return false;
+    }
+
+
 }

@@ -88,8 +88,16 @@
                                 $<?= $product['price'] ?>
                             </div>
                             <div class="product-links">
-                                <a href="#" class="px-2"><i class="fas fa-shopping-cart"></i></a>
-                                <a href="#"><i class="far fa-heart"></i></a>
+                                <a href="cart/add?id=<?=$product['id'] ?>"
+                                   data-id="<?=$product['id'] ?>"
+                                   class="add-to-cart"
+                                   id="add-to-cart-<?=$product['id'] ?>"
+                                >
+                                    <i class="fas fa-shopping-cart"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="far fa-heart"></i>
+                                </a>
                             </div>
                         </div>
                     </div>
