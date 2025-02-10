@@ -56,5 +56,23 @@ class BaseController extends Controller
         return false;
     }
 
+    public function loadView(string $view, array $params = []): void
+    {
+        if(is_array($params)){
+            extract($params);
+        }
+
+        // TODO
+        $pref = '';
+
+        $view_file = VIEWS . "/{$pref}{$this->route['controller']}/{$view}.php";
+        if(!is_file($view_file)){
+            throw new \Exception("Не найден вид {$view_file}", 500);
+        }
+
+        require $view_file;
+        die();
+    }
+
 
 }

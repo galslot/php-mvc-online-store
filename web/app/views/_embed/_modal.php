@@ -23,49 +23,10 @@
                 <h5 class="modal-title" id="exampleModalLabel"><?= i18n('tp_cart') ?></h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-body">
-                <table class="table text-start">
-                    <thead>
-                    <tr>
-                        <th scope="col"><?= i18n('tp_photo') ?></th>
-                        <th scope="col"><?= i18n('tp_products') ?></th>
-                        <th scope="col"><?= i18n('tp_quantity') ?></th>
-                        <th scope="col"><?= i18n('tp_price') ?></th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>
-                            <a href="#"><img src="<?= HOME_PAGE ?>/uploads/img/products/apple-27-inch-led-cinema.jpg" alt="" style="max-width:180px; width:100%" ></a>
-                        </td>
-                        <td><a href="#">Apple cinema</a></td>
-                        <td>1</td>
-                        <td>100</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <a href="#"><img src="<?= HOME_PAGE ?>/uploads/img/products/canon-eos.jpg" alt="" style="max-width:180px; width:100%"></a>
-                        </td>
-                        <td><a href="#">Canon EOS</a></td>
-                        <td>1</td>
-                        <td>100</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <a href="#"><img src="<?= HOME_PAGE ?>/uploads/img/products/notebook-xiaomi-mi-pro-15.jpg" alt="" style="max-width:180px; width:100%"></a>
-                        </td>
-                        <td><a href="#">Notebook Xiaomi</a></td>
-                        <td>1</td>
-                        <td>100</td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-danger ripple" data-bs-dismiss="modal"><?= i18n('tp_continue_shop') ?></button>
-                <button type="button" class="btn btn-primary"><?= i18n('tp_order') ?></button>
+
+            <div class="modal-cart-content">
+
             </div>
         </div>
     </div>
 </div>
-

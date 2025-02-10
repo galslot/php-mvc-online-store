@@ -10,6 +10,10 @@ return [
     'tp_price' => 'Цена',
     'tp_continue_shop' => 'Продолжить покупки',
     'tp_order' => 'Оформить заказ',
+    'tp_cart_clear' => 'Очистить корзину',
+    'tpl_cart_total_quantity' => 'Итого:',
+    'tpl_cart_sum' => 'Сумма:',
+    'tpl_cart_empty' => 'Корзина пустая.',
 
     'tp_computers' => 'Компьютеры',
     'tp_tablets' => 'Планшеты',

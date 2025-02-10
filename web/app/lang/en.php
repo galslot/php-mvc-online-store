@@ -10,6 +10,10 @@ return [
     'tp_price' => 'Price',
     'tp_continue_shop' => 'Continue shopping',
     'tp_order' => 'Make an order',
+    'tp_cart_clear' => 'Clear cart',
+    'tpl_cart_total_quantity' => 'Total:',
+    'tpl_cart_sum' => 'Sum:',
+    'tpl_cart_empty' => 'Empty cart.',
 
     'tp_computers' => 'Computers',
     'tp_tablets' => 'Tablets',

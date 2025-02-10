@@ -14,7 +14,7 @@ class CartModel extends BaseModel
                  WHERE p.status = 1 AND pd.language_id = ? AND p.id = ?", [$langId, $id]);
     }
 
-    public function addToCart($product, $quantity = 1): bool
+    public function addToCart(array $product, int $quantity = 1): bool
     {
         $quantity = abs($quantity);
         $product_id = $product['id'];
@@ -47,6 +47,29 @@ class CartModel extends BaseModel
         $total = $product['price'] * $quantity;
         $_SESSION['cart.quantity'] = !empty($_SESSION['cart.quantity']) ? $_SESSION['cart.quantity'] + $quantity : $quantity;
         $_SESSION['cart.sum'] = !empty($_SESSION['cart.sum']) ? $_SESSION['cart.sum'] + $total : $total;
+
+        return true;
+    }
+
+    public function deleteProductFromCart($product_id): bool
+    {
+        if(empty($product_id)) return false;
+
+        $quantity_minus = $_SESSION['cart'][ $product_id ]['quantity'];
+        $sum_minus      = $_SESSION['cart'][ $product_id ]['quantity'] * $_SESSION['cart'][ $product_id ]['price'];
+
+        $_SESSION['cart.quantity'] -= $quantity_minus;
+        $_SESSION['cart.sum'] -= $sum_minus;
+
+        unset($_SESSION['cart'][$product_id]);
+        return true;
+    }
+
+    public function deleteAllFromCart(): bool
+    {
+        unset($_SESSION['cart']);
+        unset($_SESSION['cart.quantity']);
+        unset($_SESSION['cart.sum']);
 
         return true;
     }

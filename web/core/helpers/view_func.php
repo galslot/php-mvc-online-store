@@ -10,7 +10,7 @@ function i18n(string $key)
     return Language::get($key);
 }
 
-function eI18n(string $key)
+function eI18n(string $key): void
 {
     echo Language::get($key);
 }

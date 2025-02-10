@@ -8,12 +8,16 @@
     <link rel="apple-touch-icon" href="<?= HOME_PAGE ?>/assets/img/apple-icon.png">
     <link rel="shortcut icon" type="image/x-icon" href="<?= HOME_PAGE ?>/assets/img/favicon.ico">
 
-    <link rel="stylesheet" href="<?= HOME_PAGE ?>/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="<?= HOME_PAGE ?>/assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="<?= HOME_PAGE ?>/assets/css/templatemo.css">
     <link rel="stylesheet" href="<?= HOME_PAGE ?>/assets/css/custom.css">
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
-    <link rel="stylesheet" href="<?= HOME_PAGE ?>/assets/css/fontawesome.min.css">
+
+    <!-- our project just needs Font Awesome Solid + Brands -->
+    <link href="<?= HOME_PAGE ?>/assets/fontawesome/css/fontawesome.css" rel="stylesheet" />
+    <link href="<?= HOME_PAGE ?>/assets/fontawesome/css/brands.css" rel="stylesheet" />
+    <link href="<?= HOME_PAGE ?>/assets/fontawesome/css/solid.css" rel="stylesheet" />
 
     <?=$this->getMeta() ?>
 </head>
@@ -77,9 +81,13 @@
                         <i class="fa fa-fw fa-search text-dark mr-2"></i>
                     </a>
 
-                    <a class="nav-icon position-relative text-decoration-none" href="#" data-bs-toggle="modal" data-bs-target="#cart-modal">
+                    <a class="nav-icon position-relative text-decoration-none" href="#" id="get-cart-header">
                         <i class="fa fa-fw fa-cart-arrow-down text-dark mr-1"></i>
-                        <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">7</span>
+                        <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark"
+                              id="cart-modal-header-cart-quantity"
+                        >
+
+                        </span>
                     </a>
                 </div>
 

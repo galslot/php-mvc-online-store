@@ -78,26 +78,6 @@ class View
         require $fileEmbed;
     }
 
-    public function getUrlToRoute($nameUrl)
-    {
-        switch ($nameUrl){
-            case 1:
-                $routeName = "about";
-                break;
-            case 2:
-                $routeName = "shop";
-                break;
-            case 3:
-                $routeName = "contact";
-                break;
-            default:
-                $routeName = "main";
-                break;
-        }
-
-         echo HOME_PAGE. "/". $routeName;
-    }
-
     public function isDebug(): bool
     {
         if(DEBUG) return true;

@@ -70,7 +70,12 @@ class Router
         }
 
         $controllerObject->$action();
-        $controllerObject->getView();
+
+        // TODO
+        // рендер View активируем только при GET запросах к action
+        if(empty($_POST)){
+            $controllerObject->getView();
+        }
     }
 
     public static function matchRoute($query): bool
