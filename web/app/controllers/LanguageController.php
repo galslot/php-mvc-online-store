@@ -3,6 +3,7 @@
 namespace app\controllers;
 
 use app\controllers\AppBase\BaseController;
+use app\models\CartModel;
 use core\GettingData;
 
 class LanguageController extends BaseController
@@ -37,6 +38,8 @@ class LanguageController extends BaseController
                 array_unshift($url_section, $lang);
             }
         }
+
+        CartModel::translateCart($this->languages[$lang]);
 
         $url_new = HOME_PAGE. "/". implode('/', $url_section);
         $this->redirect($url_new);

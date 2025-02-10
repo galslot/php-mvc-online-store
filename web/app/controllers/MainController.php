@@ -21,7 +21,7 @@ class MainController extends BaseController
         $slides = $this->model->getSlides();
         $this->set(compact('slides'));
 
-        $products = $this->model->getHit($this->getLang('id'), 3);
+        $products = $this->model->getHit($this->getLang('id'), 6);
 
         $this->set(compact('slides', 'products'));
     }
