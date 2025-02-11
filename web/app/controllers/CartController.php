@@ -23,7 +23,7 @@ class CartController extends BaseController
 
         $quantity = GettingData::get('quantity', 'i');
 
-        $product = $this->model->getProduct($id, $language['id']);
+        $product = $this->model->getProductById($id, $language['id']);
         if(!$product) return false;
 
         $this->model->addToCart($product, $quantity);

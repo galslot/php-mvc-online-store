@@ -1,10 +1,16 @@
+<?php
+
+/** @var $gallery ?array */
+/** @var $product array */
+
+?>
 <!-- Open Content -->
 <section class="bg-light">
     <div class="container pb-5">
         <div class="row">
             <div class="col-lg-5 mt-5">
                 <div class="card mb-3">
-                    <img class="card-img img-fluid" src="<?= HOME_PAGE ?>/assets/img/product_single_10.jpg" alt="Card image cap" id="product-detail">
+                    <img class="card-img img-fluid" src="<?= HOME_PAGE. $product['img'] ?>" alt="<?= $product['title'] ?>" id="product-detail">
                 </div>
                 <div class="row">
                     <!--Start Controls-->
@@ -23,21 +29,15 @@
                             <!--First slide-->
                             <div class="carousel-item active">
                                 <div class="row">
-                                    <div class="col-4">
-                                        <a href="#">
-                                            <img class="card-img img-fluid" src="<?= HOME_PAGE ?>/assets/img/product_single_01.jpg" alt="Product Image 1">
-                                        </a>
-                                    </div>
-                                    <div class="col-4">
-                                        <a href="#">
-                                            <img class="card-img img-fluid" src="<?= HOME_PAGE ?>/assets/img/product_single_02.jpg" alt="Product Image 2">
-                                        </a>
-                                    </div>
-                                    <div class="col-4">
-                                        <a href="#">
-                                            <img class="card-img img-fluid" src="<?= HOME_PAGE ?>/assets/img/product_single_03.jpg" alt="Product Image 3">
-                                        </a>
-                                    </div>
+                                    <?php if(!empty($gallery)): ?>
+                                        <?php foreach ($gallery as $itemImg): ?>
+                                        <div class="col-4">
+                                            <a href="#">
+                                                <img class="card-img img-fluid" src="<?= HOME_PAGE. $itemImg['img'] ?>" alt="<?= $product['title'] ?>">
+                                            </a>
+                                        </div>
+                                        <?php endforeach; ?>
+                                    <?php endif; ?>
                                 </div>
                             </div>
                             <!--/.First slide-->
@@ -45,46 +45,21 @@
                             <!--Second slide-->
                             <div class="carousel-item">
                                 <div class="row">
-                                    <div class="col-4">
-                                        <a href="#">
-                                            <img class="card-img img-fluid" src="<?= HOME_PAGE ?>/assets/img/product_single_04.jpg" alt="Product Image 4">
-                                        </a>
-                                    </div>
-                                    <div class="col-4">
-                                        <a href="#">
-                                            <img class="card-img img-fluid" src="<?= HOME_PAGE ?>/assets/img/product_single_05.jpg" alt="Product Image 5">
-                                        </a>
-                                    </div>
-                                    <div class="col-4">
-                                        <a href="#">
-                                            <img class="card-img img-fluid" src="<?= HOME_PAGE ?>/assets/img/product_single_06.jpg" alt="Product Image 6">
-                                        </a>
-                                    </div>
+
+                                    <?php if(!empty($gallery)): ?>
+                                        <?php foreach ($gallery as $itemImg): ?>
+                                            <div class="col-4">
+                                                <a href="#">
+                                                    <img class="card-img img-fluid" src="<?= HOME_PAGE. $itemImg['img'] ?>" alt="<?= $product['title'] ?>">
+                                                </a>
+                                            </div>
+                                        <?php endforeach; ?>
+                                    <?php endif; ?>
+
                                 </div>
                             </div>
                             <!--/.Second slide-->
 
-                            <!--Third slide-->
-                            <div class="carousel-item">
-                                <div class="row">
-                                    <div class="col-4">
-                                        <a href="#">
-                                            <img class="card-img img-fluid" src="<?= HOME_PAGE ?>/assets/img/product_single_07.jpg" alt="Product Image 7">
-                                        </a>
-                                    </div>
-                                    <div class="col-4">
-                                        <a href="#">
-                                            <img class="card-img img-fluid" src="<?= HOME_PAGE ?>/assets/img/product_single_08.jpg" alt="Product Image 8">
-                                        </a>
-                                    </div>
-                                    <div class="col-4">
-                                        <a href="#">
-                                            <img class="card-img img-fluid" src="<?= HOME_PAGE ?>/assets/img/product_single_09.jpg" alt="Product Image 9">
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--/.Third slide-->
                         </div>
                         <!--End Slides-->
                     </div>
@@ -103,45 +78,48 @@
             <div class="col-lg-7 mt-5">
                 <div class="card">
                     <div class="card-body">
-                        <h1 class="h2">Active Wear</h1>
-                        <p class="h3 py-2">$25.00</p>
+                        <h1 class="h2"><?= $product['title'] ?></h1>
+                        <p class="h3 py-2">$ <?= $product['price'] ?></p>
                         <p class="py-2">
                             <i class="fa fa-star text-warning"></i>
                             <i class="fa fa-star text-warning"></i>
                             <i class="fa fa-star text-warning"></i>
                             <i class="fa fa-star text-warning"></i>
                             <i class="fa fa-star text-secondary"></i>
-                            <span class="list-inline-item text-dark">Rating 4.8 | 36 Comments</span>
+                            <span class="list-inline-item text-dark">
+                                <?= i18n('tp_product_rating') ?> 4.8 | 36 <?= i18n('tp_product_comments') ?>
+                            </span>
+                        </p>
+                        <p class="py-2 text-muted">
+                            <?= i18n('tp_product_reviews') ?> (<?=$product['reviews'] ?>)
                         </p>
                         <ul class="list-inline">
                             <li class="list-inline-item">
-                                <h6>Brand:</h6>
+                                <h6><?= i18n('tp_product_brand') ?>:</h6>
                             </li>
                             <li class="list-inline-item">
-                                <p class="text-muted"><strong>Easy Wear</strong></p>
+                                <p class="text-muted">
+                                    <strong><?= i18n('tp_product_brand') ?> <?= $product['id'] ?></strong>
+                                </p>
                             </li>
                         </ul>
 
-                        <h6>Description:</h6>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod temp incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse. Donec condimentum elementum convallis. Nunc sed orci a diam ultrices aliquet interdum quis nulla.</p>
+                        <h6><?= i18n('tp_product_description') ?>:</h6>
+                        <p>
+                            <?=$product['content'] ?>
+                        </p>
                         <ul class="list-inline">
                             <li class="list-inline-item">
-                                <h6>Avaliable Color :</h6>
+                                <h6><?= i18n('tp_product_color') ?>:</h6>
                             </li>
                             <li class="list-inline-item">
                                 <p class="text-muted"><strong>White / Black</strong></p>
                             </li>
                         </ul>
 
-                        <h6>Specification:</h6>
+                        <h6><?= i18n('tp_product_specification') ?>:</h6>
                         <ul class="list-unstyled pb-3">
-                            <li>Lorem ipsum dolor sit</li>
-                            <li>Amet, consectetur</li>
-                            <li>Adipiscing elit,set</li>
-                            <li>Duis aute irure</li>
-                            <li>Ut enim ad minim</li>
-                            <li>Dolore magna aliqua</li>
-                            <li>Excepteur sint</li>
+                            <li><?=$product['exerpt'] ?></li>
                         </ul>
 
                         <form action="" method="GET">
@@ -151,7 +129,7 @@
                                 <div class="col-auto">
                                     <ul class="list-inline pb-3">
                                         <li class="list-inline-item text-right">
-                                            Quantity
+                                            <?= i18n('tp_quantity') ?>
                                             <input type="hidden" name="product-quanity" id="product-quanity" value="1">
                                         </li>
                                         <li class="list-inline-item"><span class="btn btn-success" id="btn-minus">-</span></li>
@@ -163,10 +141,15 @@
                             </div>
                             <div class="row pb-3">
                                 <div class="col d-grid">
-                                    <button type="submit" class="btn btn-success btn-lg" name="submit" value="buy">Buy</button>
-                                </div>
-                                <div class="col d-grid">
-                                    <button type="submit" class="btn btn-success btn-lg" name="submit" value="addtocard">Add To Cart</button>
+                                    <button
+                                            type="submit"
+                                            class="btn btn-success btn-lg add-to-cart"
+                                            name="submit"
+                                            value="buy"
+                                            data-id="<?= $product['id'] ?>"
+                                    >
+                                        <?= i18n('tpl_buy') ?>
+                                    </button>
                                 </div>
                             </div>
                         </form>

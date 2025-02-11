@@ -14,6 +14,7 @@ return [
     'tpl_cart_total_quantity' => 'Итого:',
     'tpl_cart_sum' => 'Сумма:',
     'tpl_cart_empty' => 'Корзина пустая.',
+    'tpl_buy' => 'Купить',
 
     'tp_computers' => 'Компьютеры',
     'tp_tablets' => 'Планшеты',
@@ -29,6 +30,14 @@ return [
     'tp_faq'       => 'FAQs',
     'tp_contact'   => 'Контакты',
 
-    'tp_subscribe' => 'Подписаться'
+    'tp_subscribe' => 'Подписаться',
+
+    'tp_product_rating'   => 'Рейтинг',
+    'tp_product_comments' => 'Комментарии',
+    'tp_product_reviews'  => 'Отзывы',
+    'tp_product_brand'    => 'Бренд',
+    'tp_product_color' => 'Доступные цвета',
+    'tp_product_description' => 'Описание',
+    'tp_product_specification' => 'Спецификация',
 ];
 

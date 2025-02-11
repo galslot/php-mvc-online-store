@@ -44,6 +44,10 @@ abstract class Controller
 
     public function setMeta($title = '', $description = '', $keywords = ''): void
     {
+        $title = $title ?? '';
+        $description = $description ?? '';
+        $keywords = $keywords ?? '';
+
         $this->meta = [
             'title' => $title,
             'description' => $description,

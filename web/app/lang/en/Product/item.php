@@ -10,4 +10,5 @@ return [
 
     'product_item_featured_products' => 'Featured products',
     'product_item_categ_month' => 'Categories of The Month',
+
 ];

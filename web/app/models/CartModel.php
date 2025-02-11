@@ -7,13 +7,6 @@ use RedBeanPHP\R;
 
 class CartModel extends BaseModel
 {
-    public function getProduct($id, $langId)
-    {
-        return R::getRow("SELECT p.*, pd.* FROM product AS p 
-                 JOIN product_description AS pd ON p.id = pd.product_id 
-                 WHERE p.status = 1 AND pd.language_id = ? AND p.id = ?", [$langId, $id]);
-    }
-
     public function addToCart(array $product, int $quantity = 1): bool
     {
         $quantity = abs($quantity);
