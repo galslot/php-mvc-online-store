@@ -2,8 +2,17 @@
 
 /** @var $gallery ?array */
 /** @var $product array */
+/** @var $breadCrumbs array */
 
 ?>
+<div class="container">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb bg-light p-2">
+            <?= $breadCrumbs ?>
+        </ol>
+    </nav>
+</div>
+
 <!-- Open Content -->
 <section class="bg-light">
     <div class="container pb-5">

@@ -51,16 +51,8 @@ class MenuWidget
         $this->menuHtml = $cache->getCache("{$this->cacheKey}_{$this->language['code']}");
 
         if(!$this->menuHtml){
-            $dataCategories = R::getAssoc(
-                "SELECT c.id, c.parent_id, c.slug, cd.category_id, cd.language_id, cd.title, cd.title
-                      FROM category AS c 
-                       JOIN category_description AS cd
-                       ON c.id = cd.category_id
-                       WHERE cd.language_id = ?",
-                [$this->language['id']]
-            );
-
-            $this->tree = $this->getBuildingTree($dataCategories);
+            $categories = App::$container->getProp("categories_{$this->language['code']}");
+            $this->tree = $this->getBuildingTree($categories);
             $this->menuHtml = $this->getMenuHtml($this->tree);
             if((int)$this->cacheExpire > 0){
                 $cache->setCache("{$this->cacheKey}_{$this->language['code']}", $this->menuHtml, $this->cacheExpire);
