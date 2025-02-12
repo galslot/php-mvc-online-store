@@ -18,7 +18,8 @@ class ProductController extends BaseController
 
         $product = $this->model->getProduct($slug, $language['id']);
         if(!$product){
-            throw new \Exception("Товар {$slug} не найден", 404);
+            $this->errorView();
+            return;
         }
 
         $breadCrumbs = BreadCrumbsModel::getBreadCrumbs($product['category_id'], $product['title']);

@@ -66,4 +66,41 @@ abstract class Controller
         die();
     }
 
+    public function isAjaxRequest(): bool
+    {
+        if(isset($_SERVER['HTTP_X_REQUESTED_WITH']) && !empty($_SERVER['HTTP_X_REQUESTED_WITH'])
+            && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest')
+        {
+            // Если Ajax запрос
+            return true;
+        }
+        return false;
+    }
+
+    public function loadView(string $view, array $params = []): void
+    {
+        if(is_array($params)){
+            extract($params);
+        }
+
+        // TODO
+        $pref = '';
+
+        $view_file = VIEWS . "/{$pref}{$this->route['controller']}/{$view}.php";
+        if(!is_file($view_file)){
+            throw new \Exception("Не найден вид {$view_file}", 500);
+        }
+
+        require $view_file;
+        die();
+    }
+
+    public function errorView($segment = "Error", $view = '404', $response = 404): void
+    {
+        http_response_code($response);
+        $this->setMeta(i18n('tp_error_N404'));
+        $this->route['controller'] = $segment;
+        $this->view = $view;
+    }
+
 }

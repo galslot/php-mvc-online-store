@@ -39,5 +39,7 @@ return [
     'tp_product_color' => 'Доступные цвета',
     'tp_product_description' => 'Описание',
     'tp_product_specification' => 'Спецификация',
+
+    'tp_error_N404' => 'Страница не найдена - 404',
 ];
 
