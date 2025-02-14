@@ -1,3 +1,35 @@
 /*
 Custom Css
 */
+
+section {
+    padding: 50px 0;
+}
+
+.section-title {
+    overflow: hidden;
+    text-transform: uppercase;
+    color: #2b1d63;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.section-title::before {
+    margin-left: -90%;
+}
+
+.section-title::after {
+    margin-right: -90%;
+}
+
+.section-title::before, .section-title::after {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    box-sizing: border-box;
+    width: 90%;
+    height: 1px;
+    background: #000;
+    border: solid #fff;
+    border-width: 0 10px;
+}

@@ -12,7 +12,7 @@ use RedBeanPHP\R;
 class BaseController extends Controller
 {
     protected array $languages; # [] все языки поддерживаемые
-    protected string $languageBase;  # базовый язык
+    protected string $languageBase;  # базовый язык - 'ru'
 
     /**
      * @throws \Exception

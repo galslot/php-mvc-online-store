@@ -21,9 +21,9 @@ use core\View;
     <div class="row">
 
         <div class="col-lg-12 category-content">
-            <h3 class="section-title m-3">
+            <h1 class="section-title m-3">
                 <?= $category['title'] ?>
-            </h3>
+            </h1>
 
             <?php if (!empty($category['content'])): ?>
                 <div class="category">

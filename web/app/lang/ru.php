@@ -11,10 +11,10 @@ return [
     'tp_continue_shop' => 'Продолжить покупки',
     'tp_order' => 'Оформить заказ',
     'tp_cart_clear' => 'Очистить корзину',
-    'tpl_cart_total_quantity' => 'Итого:',
-    'tpl_cart_sum' => 'Сумма:',
-    'tpl_cart_empty' => 'Корзина пустая.',
-    'tpl_buy' => 'Купить',
+    'tp_cart_total_quantity' => 'Итого:',
+    'tp_cart_sum' => 'Сумма:',
+    'tp_cart_empty' => 'Корзина пустая.',
+    'tp_buy' => 'Купить',
 
     'tp_computers' => 'Компьютеры',
     'tp_tablets' => 'Планшеты',
@@ -40,8 +40,12 @@ return [
     'tp_product_description' => 'Описание',
     'tp_product_specification' => 'Спецификация',
 
-    'tpl_total_pagination' => 'товара(ов) из',
+    'tp_total_pagination' => 'товара(ов) из',
 
     'tp_error_N404' => 'Страница не найдена - 404',
+
+    'tp_search_title' => 'Поиск',
+    'tp_search_query' => 'Поиск по: ',
+    'tp_search_not_found' => 'Для поиска не найдено результатов',
 ];
 

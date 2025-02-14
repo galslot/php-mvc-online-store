@@ -11,10 +11,10 @@ return [
     'tp_continue_shop' => 'Continue shopping',
     'tp_order' => 'Make an order',
     'tp_cart_clear' => 'Clear cart',
-    'tpl_cart_total_quantity' => 'Total:',
-    'tpl_cart_sum' => 'Sum:',
-    'tpl_cart_empty' => 'Empty cart.',
-    'tpl_buy' => 'Buy',
+    'tp_cart_total_quantity' => 'Total:',
+    'tp_cart_sum' => 'Sum:',
+    'tp_cart_empty' => 'Empty cart.',
+    'tp_buy' => 'Buy',
 
     'tp_computers' => 'Computers',
     'tp_tablets' => 'Tablets',
@@ -40,8 +40,12 @@ return [
     'tp_product_description' => 'Description',
     'tp_product_specification' => 'Specification',
 
-    'tpl_total_pagination' => 'product(s) from',
+    'tp_total_pagination' => 'product(s) from',
 
     'tp_error_N404' => 'Page not found - 404',
+
+    'tp_search_title' => 'Search',
+    'tp_search_query' => 'Search by: ',
+    'tp_search_not_found' => 'No results were found for your search',
 
 ];
