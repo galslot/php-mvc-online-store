@@ -1,6 +1,7 @@
 <?php
     /** @var $slides array */
     /** @var $products array */
+    /** @var $this \core\View */
 ?>
 <?php if(!empty($slides)): ?>
 <!-- Start Banner Hero -->
@@ -46,67 +47,14 @@
 <!-- End Banner Hero -->
 <?php endif; ?>
 
-<!-- Start Featured Product -->
-<section class="bg-light">
-    <div class="container py-5">
-        <div class="row text-center py-3">
-            <div class="col-lg-6 m-auto">
-                <h1 class="h1"><?= i18n('main_index_featured_products') ?></h1>
-                <p> </p>
-            </div>
-        </div>
-        <div class="row">
-            <?php foreach($products as $product) : ?>
-                <div class="col-12 col-md-4 mb-4">
-                    <div class="card h-100">
-                        <a href="product/<?=$product['slug'] ?>">
-                            <img src="<?=$product['img'] ?>" class="card-img-top" alt="">
-                        </a>
-                        <div class="card-body">
-                            <ul class="list-unstyled d-flex justify-content-between">
-                                <li>
-                                    <i class="text-warning fa fa-star"></i>
-                                    <i class="text-warning fa fa-star"></i>
-                                    <i class="text-warning fa fa-star"></i>
-                                    <i class="text-warning fa fa-star"></i>
-                                    <i class="text-muted fa fa-star"></i>
-                                </li>
-                                <li class="text-muted text-right">
-                                    $<?=$product['price'] ?>
-                                </li>
-                            </ul>
-                            <a href="product/<?=$product['slug'] ?>" class="h3 text-decoration-none text-dark">
-                                <?=$product['title'] ?>
-                            </a>
-                            <p class="card-text">
-                                <?=$product['exerpt'] ?>
-                            </p>
-                            <p class="text-muted">
-                                Reviews (<?=$product['reviews'] ?>)
-                            </p>
-                            <div class="product-price px-2">
-                                $<?= $product['price'] ?>
-                            </div>
-                            <div class="product-links">
-                                <a href="cart/add?id=<?=$product['id'] ?>"
-                                   data-id="<?=$product['id'] ?>"
-                                   class="add-to-cart"
-                                   id="add-to-cart-<?=$product['id'] ?>"
-                                >
-                                    <i class="fas fa-shopping-cart"></i>
-                                </a>
-                                <a href="#">
-                                    <i class="far fa-heart"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            <?php endforeach ?>
+<div class="container">
+    <div class="row text-center py-3">
+        <div class="col-lg-6 m-auto">
+            <h2 class="h2"><?= i18n('main_index_featured_products') ?></h2>
         </div>
     </div>
-</section>
-<!-- End Featured Product -->
+</div>
+<?php $this->getEmbed('_list_products', ['products' => $products]) ?>
 
 <!-- Start Categories of The Month -->
 <section class="container py-5">

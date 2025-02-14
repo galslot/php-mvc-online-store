@@ -61,7 +61,7 @@
 
                 <?php new \app\widgets\menu\MenuWidget([
                     'class' => 'nav navbar-nav d-flex justify-content-between mx-lg-auto',
-                    'cache_expire' => 30,
+                    'cache_expire' => 0,
                     'attrs' => ['id' => 'widget_menu_tpl'],
                 ]) ?>
 

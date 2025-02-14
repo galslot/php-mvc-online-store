@@ -136,8 +136,14 @@ $(function() {
         });
     }
     $('#cart-modal .modal-cart-content').on('click', '#cart_clear', button_cart_del_all_click);
-
     // Cart End
+
+    // Select sorting
+    $('#input-sort').on('change', function () {
+        let pathname = HOME_PAGE + window.location.pathname + '?' + $(this).val();
+        window.location = pathname;
+    });
+
 
     $('#languages button').on('click', function () {
 

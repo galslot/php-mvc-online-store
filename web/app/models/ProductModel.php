@@ -12,5 +12,5 @@ class ProductModel extends BaseModel
         return R::getAll("SELECT * FROM product_gallery AS pg
                   WHERE pg.product_id = ?", [$productId]);
     }
-
+    
 }

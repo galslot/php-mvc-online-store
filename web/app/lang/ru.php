@@ -40,6 +40,8 @@ return [
     'tp_product_description' => 'Описание',
     'tp_product_specification' => 'Спецификация',
 
+    'tpl_total_pagination' => 'товара(ов) из',
+
     'tp_error_N404' => 'Страница не найдена - 404',
 ];
 

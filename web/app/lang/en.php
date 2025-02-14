@@ -40,6 +40,8 @@ return [
     'tp_product_description' => 'Description',
     'tp_product_specification' => 'Specification',
 
+    'tpl_total_pagination' => 'product(s) from',
+
     'tp_error_N404' => 'Page not found - 404',
 
 ];
