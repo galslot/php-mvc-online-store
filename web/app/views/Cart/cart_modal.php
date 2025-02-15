@@ -46,18 +46,18 @@
           </tr>
         <?php endforeach ?>
         <tr>
-            <td colspan="4" class="text-end"><?= i18n('tpl_cart_total_quantity') ?></td>
+            <td colspan="4" class="text-end"><?= i18n('tp_cart_total_quantity') ?></td>
             <td class="cart-qty"><?= $cart_quantity ?></td>
         </tr>
         <tr>
-            <td colspan="4" class="text-end"><?= i18n('tpl_cart_sum') ?></td>
+            <td colspan="4" class="text-end"><?= i18n('tp_cart_sum') ?></td>
             <td class="cart-sum">$<?= $cart_sum ?></td>
         </tr>
         </tbody>
       </table>
     </div>
     <?php else: ?>
-        <h4 class="text-start"><?= i18n('tpl_cart_empty') ?></h4>
+        <h4 class="text-start"><?= i18n('tp_cart_empty') ?></h4>
     <?php endif; ?>
 </div>
 

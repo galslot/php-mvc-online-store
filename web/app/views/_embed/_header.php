@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
 
     <!-- our project just needs Font Awesome Solid + Brands -->
-    <link href="<?= HOME_PAGE ?>/assets/fontawesome/css/fontawesome.css" rel="stylesheet" />
+    <link href="<?= HOME_PAGE ?>/assets/fontawesome/css/all.min.css" rel="stylesheet" />
     <link href="<?= HOME_PAGE ?>/assets/fontawesome/css/brands.css" rel="stylesheet" />
     <link href="<?= HOME_PAGE ?>/assets/fontawesome/css/solid.css" rel="stylesheet" />
 
@@ -87,8 +87,14 @@
                         <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark"
                               id="cart-modal-header-cart-quantity"
                         >
-
+                            <?= $_SESSION['cart.quantity'] ?? 0 ?>
                         </span>
+                    </a>
+                </div>
+
+                <div class="dropdown d-inline-block px-2">
+                    <a href="favorites/list">
+                        <i class="far fa-heart"></i>
                     </a>
                 </div>
 

@@ -144,13 +144,89 @@ $(function() {
         window.location = pathname;
     });
 
-
+    // languages
     $('#languages button').on('click', function () {
-
         const lang_code = $(this).data("langcode");
-        console.log("languages = ", lang_code);
         window.location = base_url + 'language/change?lang=' + lang_code;
+    });
 
+    // Favorites
+    $('.product-links').on('click', '.add-to-favorites', function (event) {
+        event.preventDefault();
+
+        const product_id = $(this).data('id');
+        const $this = $(this);
+
+        console.log('add-to-favorites. id=' + product_id);
+
+        $.ajax({
+            url: 'favorites/add',
+            type: 'GET',
+            data: {
+                'id': product_id,
+            },
+            success: function (response){
+                response = JSON.parse(response);
+
+                Swal.fire(
+                    response.text,
+                    '',
+                    response.result
+                );
+
+                $this.removeClass('add-to-favorites').addClass('delete-from-favorites');
+                $this.find("i").removeClass('fa-regular fa-heart').addClass('fa-solid fa-heart');
+            },
+            error: function (){
+                alert("Error ajax (6) !");
+            }
+        });
+    });
+
+    $('.product-links').on('click', '.delete-from-favorites', function (event) {
+        event.preventDefault();
+        const product_id = $(this).data('id');
+        const $this = $(this);
+
+        console.log('delete-from-favorites. id=' + product_id);
+
+        $.ajax({
+            url: 'favorites/delete',
+            type: 'GET',
+            data: {
+                id: product_id
+            },
+            success: function (response) {
+                const url = window.location.toString();
+                if (url.indexOf('favorites') !== -1) {
+                    Swal.fire({
+                        title: 'Success',
+                        icon: 'success',
+                        html: 'Success',
+                        showConfirmButton: true,
+                        timer: 1500
+                    }).then((result) => {
+                        setTimeout(function(){
+                            window.location = url;
+                        },500);
+                    });
+                } else {
+                    response = JSON.parse(response);
+                    Swal.fire(
+                        response.text,
+                        '',
+                        response.result
+                    );
+                    if (response.result === 'success') {
+                        $this.removeClass('delete-from-favorites').addClass('add-to-favorites');
+                        $this.find('i').removeClass('fa-solid fa-heart').addClass('fa-regular fa-heart');
+                    }
+                }
+            },
+            error: function () {
+                alert('Error ajax(7) !');
+            }
+        });
     });
 
 });

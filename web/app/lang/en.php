@@ -48,4 +48,12 @@ return [
     'tp_search_query' => 'Search by: ',
     'tp_search_not_found' => 'No results were found for your search',
 
+    'tp_favorites_add_success'    => 'Product added to favorites',
+    'tp_favorites_add_error'      => 'Error adding product to favorites',
+    'tp_favorites_delete_success' => 'Product removed from favorites',
+    'tp_favorites_delete_error'   => 'Error removing a product from favorites',
+
+    'favorites_index_title' => 'Favorite products list',
+    'favorites_index_not_found' => 'Favorite list is empty',
+
 ];

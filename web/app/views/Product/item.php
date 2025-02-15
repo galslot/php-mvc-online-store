@@ -157,7 +157,7 @@
                                             value="buy"
                                             data-id="<?= $product['id'] ?>"
                                     >
-                                        <?= i18n('tpl_buy') ?>
+                                        <?= i18n('tp_buy') ?>
                                     </button>
                                 </div>
                             </div>

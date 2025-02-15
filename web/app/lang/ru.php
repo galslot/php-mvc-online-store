@@ -47,5 +47,14 @@ return [
     'tp_search_title' => 'Поиск',
     'tp_search_query' => 'Поиск по: ',
     'tp_search_not_found' => 'Для поиска не найдено результатов',
+
+    'tp_favorites_add_success'    => 'Товар добавлен в избранное',
+    'tp_favorites_add_error'      => 'Ошибка добавления товара в избранное',
+    'tp_favorites_delete_success' => 'Товар удален из избранного',
+    'tp_favorites_delete_error'   => 'Ошибка удаления товара из избранного',
+
+    'favorites_index_title'     => 'Список избранных продуктов',
+    'favorites_index_not_found' => 'Список избранного пуст',
+
 ];
 

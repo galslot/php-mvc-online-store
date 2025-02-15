@@ -112,6 +112,7 @@
 <script src="<?= HOME_PAGE ?>/assets/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="<?= HOME_PAGE ?>/assets/js/jquery-3.7.1.js"></script>
 <script src="<?= HOME_PAGE ?>/assets/js/templa.js"></script>
+<script src="<?= HOME_PAGE ?>/assets/js/sweetalert2.js"></script>
 <script src="<?= HOME_PAGE ?>/assets/js/main.js"></script>
 
 </body>

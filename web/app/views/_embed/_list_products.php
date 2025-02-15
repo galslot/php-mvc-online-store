@@ -3,6 +3,8 @@
 /** @var $products array */
 /** @var $this \core\View */
 
+use core\App;
+
 ?>
 
 <!-- Start Products -->
@@ -48,9 +50,20 @@
                                 >
                                     <i class="fas fa-shopping-cart"></i>
                                 </a>
-                                <a href="#">
-                                    <i class="far fa-heart"></i>
-                                </a>
+
+                                <?php if(in_array($product['id'], App::$container->getProp("favorites"))): ?>
+                                    <a href="favorites/delete?id=<?=$product['id'] ?>" data-id="<?=$product['id'] ?>"
+                                       class="delete-from-favorites"
+                                    >
+                                        <i class="fa-solid fa-heart" style="color: #0c83c2;"></i>
+                                    </a>
+                                <?php else: ?>
+                                    <a href="favorites/add?id=<?=$product['id'] ?>" data-id="<?=$product['id'] ?>"
+                                       class="add-to-favorites"
+                                    >
+                                        <i class="fa-regular fa-heart" style="color: #0c83c2;"></i>
+                                    </a>
+                                <?php endif; ?>
                             </div>
                         </div>
                     </div>

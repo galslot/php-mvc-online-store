@@ -3,6 +3,7 @@
 namespace app\controllers\AppBase;
 
 use app\models\AppBase\BaseModel;
+use app\models\FavoritesModel;
 use app\widgets\language\LangWidget;
 use core\App;
 use core\Controller;
@@ -47,6 +48,9 @@ class BaseController extends Controller
             [$language['id']]
         );
         App::$container->setProp("categories_{$language['code']}", $categories);
+
+        $favorites = FavoritesModel::getFavoritesIds();
+        App::$container->setProp("favorites", $favorites);
     }
 
     public function getLang(string $key)
