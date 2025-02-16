@@ -24,23 +24,13 @@
             </div>
 
             <div class="col-md-4 pt-5">
-                <h2 class="h2 text-light border-bottom pb-3 border-light"><?= i18n('tp_categories') ?></h2>
-                <ul class="list-unstyled text-light footer-link-list">
-                    <li><a class="text-decoration-none" href="#"><?= i18n('tp_computers') ?></a></li>
-                    <li><a class="text-decoration-none" href="#"><?= i18n('tp_tablets') ?></a></li>
-                    <li><a class="text-decoration-none" href="#"><?= i18n('tp_phones') ?></a></li>
-                    <li><a class="text-decoration-none" href="#"><?= i18n('tp_cameras') ?></a></li>
-                </ul>
-            </div>
-
-            <div class="col-md-4 pt-5">
                 <h2 class="h2 text-light border-bottom pb-3 border-light"><?= i18n('tp_further') ?></h2>
-                <ul class="list-unstyled text-light footer-link-list">
-                    <li><a class="text-decoration-none" href="#"><?= i18n('tp_about') ?></a></li>
-                    <li><a class="text-decoration-none" href="#"><?= i18n('tp_locations') ?></a></li>
-                    <li><a class="text-decoration-none" href="#"><?= i18n('tp_faq') ?></a></li>
-                    <li><a class="text-decoration-none" href="#"><?= i18n('tp_contact') ?></a></li>
-                </ul>
+                <?php new \app\widgets\content\ContentWidget([
+                    'cache' => 0,
+                    'class' => 'list-unstyled text-light footer-link-list',
+                    'prepend' => '<li><a href="' . baseUrl() . '">' . i18n('tp_home') . '</a></li>',
+                 ])
+                ?>
             </div>
 
         </div>

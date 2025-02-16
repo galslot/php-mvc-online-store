@@ -56,5 +56,7 @@ return [
     'favorites_index_title'     => 'Список избранных продуктов',
     'favorites_index_not_found' => 'Список избранного пуст',
 
+    'tp_home'   => 'Главная',
+
 ];
 

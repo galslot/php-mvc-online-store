@@ -56,4 +56,6 @@ return [
     'favorites_index_title' => 'Favorite products list',
     'favorites_index_not_found' => 'Favorite list is empty',
 
+    'tp_home'   => 'Home',
+
 ];
