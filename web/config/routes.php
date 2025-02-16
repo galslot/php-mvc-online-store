@@ -10,6 +10,7 @@ Router::add('^(?P<lang>[a-z]+)?/?product/(?P<slug>[a-z0-9-_]+)/?$', ['controller
 Router::add('^(?P<lang>[a-z]+)?/?category/(?P<slug>[a-z0-9-_]+)/?$', ['controller' => 'Category', 'action' => 'view']);
 Router::add('^(?P<lang>[a-z]+)?/?search/?$', ['controller' => 'Search', 'action' => 'view']);
 Router::add('^(?P<lang>[a-z]+)?/?favorites/?$', ['controller' => 'Favorites', 'action' => 'list']);
+Router::add('^(?P<lang>[a-z]+)?/?content/(?P<slug>[a-z0-9-_]+)/?$', ['controller' => 'Content', 'action' => 'view']);
 
 Router::add('^(?P<lang>[a-z]+)?/?$', ['controller' => 'Main', 'action' => 'index']);
 
