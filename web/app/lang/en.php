@@ -58,4 +58,20 @@ return [
 
     'tp_home'   => 'Home',
 
+    'user_signup_button'             => 'Signup',
+    'user_signup_success_register'   => 'Account has been created',
+    'user_signup_error_register'     => 'Registration error',
+    'user_signup_error_email_unique' => 'This email is already registered',
+    'form_signup_email_input'    => 'E-mail',
+    'form_signup_password_input' => 'Password',
+    'form_signup_name_input'     => 'Name',
+    'form_signup_lastname_input' => 'Surname',
+    'form_signup_address_input'  => 'Address',
+
+    'user_login_button'        => 'Log in',
+    'user_login_success_login' => 'You are successfully logged in',
+    'user_login_error_login'   => 'Login or password entered incorrectly',
+    'user_login_cabinet'        => 'Cabinet',
+    'user_login_logout'         => 'Logout',
+
 ];

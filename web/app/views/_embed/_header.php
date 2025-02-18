@@ -103,8 +103,13 @@
                         <i class="far fa-user"></i>
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#"><?= i18n('tp_login') ?></a></li>
-                        <li><a class="dropdown-item" href="#"><?= i18n('tp_register') ?></a></li>
+                        <?php if (empty($_SESSION['user'])): ?>
+                            <li><a class="dropdown-item" href="<?= baseUrl() ?>user/login"><?= i18n('tp_login'); ?></a></li>
+                            <li><a class="dropdown-item" href="<?= baseUrl() ?>user/registration"><?= i18n('tp_register'); ?></a></li>
+                        <?php else: ?>
+                            <li><a class="dropdown-item" href="<?= baseUrl() ?>user/cabinet"><?= i18n('user_login_cabinet'); ?></a></li>
+                            <li><a class="dropdown-item" href="<?= baseUrl() ?>user/logout"><?= i18n('user_login_logout'); ?></a></li>
+                        <?php endif; ?>
                     </ul>
                 </div>
 

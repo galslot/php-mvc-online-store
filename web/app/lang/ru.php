@@ -58,5 +58,21 @@ return [
 
     'tp_home'   => 'Главная',
 
+    'user_signup_button'             => 'Регистрация',
+    'user_signup_success_register'   => 'Учетная запись была создана',
+    'user_signup_error_register'     => 'Ошибка при регистрации',
+    'user_signup_error_email_unique' => 'Этот email уже был зарегистрирован',
+    'form_signup_email_input'    => 'E-mail',
+    'form_signup_password_input' => 'Пароль',
+    'form_signup_name_input'     => 'Имя',
+    'form_signup_lastname_input' => 'Фамилия',
+    'form_signup_address_input'  => 'Адрес',
+
+    'user_login_button' => 'Вход',
+    'user_login_success_login' => 'Вы успешно авторизованы',
+    'user_login_error_login'   => 'Введены неверно логин или пароль',
+    'user_login_cabinet'        => 'Личный кабинет',
+    'user_login_logout'         => 'Выход',
+
 ];
 
