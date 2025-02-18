@@ -18,7 +18,7 @@ return [
 
     'tp_computers' => 'Computers',
     'tp_tablets' => 'Tablets',
-    'tp_phones' => 'Phones',
+    'tp_smartphones' => 'Smartphones',
     'tp_cameras' => 'Cameras',
 
     'tp_products' => 'Products',

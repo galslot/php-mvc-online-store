@@ -61,29 +61,33 @@
     <div class="row text-center pt-3">
         <div class="col-lg-6 m-auto">
             <h1 class="section-title"><?= i18n('main_index_categ_month') ?></h1>
-            <p>
-                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                deserunt mollit anim id est laborum.
-            </p>
+            <p> <?= i18n('main_index_categ_month_text') ?> </p>
+            <p> <?= i18n('main_index_categ_month_text2') ?> </p>
         </div>
     </div>
     <div class="row">
         <div class="col-12 col-md-4 p-5 mt-3">
-            <a href="#"><img src="<?= HOME_PAGE ?>/assets/img/category_img_01.jpg" class="rounded-circle img-fluid border"></a>
+            <a href="<?= baseUrl() ?>category/kompyutery">
+                <img src="<?= HOME_PAGE ?>/assets/img/kompyutery_category_img_01.jpg" class="rounded-circle img-fluid border">
+            </a>
             <p class="text-center mt-2">
-                <a class="btn btn-success"><?= i18n('tp_computers') ?></a>
+                <a href="<?= baseUrl() ?>category/kompyutery" class="btn btn-success"><?= i18n('tp_computers') ?></a>
             </p>
         </div>
         <div class="col-12 col-md-4 p-5 mt-3">
-            <a href="#"><img src="<?= HOME_PAGE ?>/assets/img/category_img_02.jpg" class="rounded-circle img-fluid border"></a>
+            <a href="<?= baseUrl() ?>category/planshety">
+                <img src="<?= HOME_PAGE ?>/assets/img/category_planshet.jpg" class="rounded-circle img-fluid border">
+            </a>
             <p class="text-center mt-2">
-                <a class="btn btn-success"><?= i18n('tp_tablets') ?></a>
+                <a href="<?= baseUrl() ?>category/planshety" class="btn btn-success"><?= i18n('tp_tablets') ?></a>
             </p>
         </div>
         <div class="col-12 col-md-4 p-5 mt-3">
-            <a href="#"><img src="<?= HOME_PAGE ?>/assets/img/category_img_03.jpg" class="rounded-circle img-fluid border"></a>
+            <a href="<?= baseUrl() ?>category/smartphon_iphone">
+                <img src="<?= HOME_PAGE ?>/assets/img/smartphon_iphone.jpg" class="rounded-circle img-fluid border">
+            </a>
             <p class="text-center mt-2">
-                <a class="btn btn-success"><?= i18n('tp_phones') ?></a>
+                <a href="<?= baseUrl() ?>category/smartphon_iphone" class="btn btn-success"><?= i18n('tp_smartphones') ?></a>
             </p>
         </div>
     </div>

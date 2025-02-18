@@ -81,15 +81,12 @@
 <!-- End Footer -->
 
 <?php if($this->isDebug()): ?>
-    <br />
+    <p>Debug:</p>
     <hr />
     <?php $this->getRouteLog() ?>
     <hr />
-    <?php $this->getAppContainer() ?>
-    <hr />
     <?php $this->getDbLogs() ?>
     <hr />
-    <br />
 <?php endif; ?>
 
 <script>

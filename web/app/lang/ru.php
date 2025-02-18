@@ -18,7 +18,7 @@ return [
 
     'tp_computers' => 'Компьютеры',
     'tp_tablets' => 'Планшеты',
-    'tp_phones' => 'Телефоны',
+    'tp_smartphones' => 'Смартфоны',
     'tp_cameras' => 'Камеры',
 
     'tp_products' => 'Товары',
