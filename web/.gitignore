@@ -42,7 +42,7 @@ tests/_support/_generated
 
 ###> ###
 # public uploads dir
-/public/uploads
+#/public/uploads
 ###< ###
 
 ###> ###
