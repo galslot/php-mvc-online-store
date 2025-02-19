@@ -20,9 +20,9 @@
 
 ** Import database Mysql **
  1. Start it up phpMyAdmin: http://localhost:9000
- 2.1. user: root
- 2.2. password - MYSQL_ROOT_PASSWORD: 123456
- 3. Import the database from the project folder /app/data/db/newshop.sql.zip
+ 2. user: root
+ 3. password - MYSQL_ROOT_PASSWORD: 123456
+ 4. Import the database from the project folder /app/data/db/newshop.sql.zip
 
 
 ** Launch the website **
