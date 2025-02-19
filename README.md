@@ -2,9 +2,9 @@
 
 
 ** Pre-Requisites: **
-    1. GIT
-    2. Docker
-    3. Docker-compose
+ 1. GIT
+ 2. Docker
+ 3. Docker-compose
 
 
 ** Installation Instructions: **
@@ -19,10 +19,9 @@
 
 
 ** Import database Mysql **
- 1. Start it up phpMyAdmin:
-	http://localhost:9000
- 2  user: root
-    password - MYSQL_ROOT_PASSWORD: 123456
+ 1. Start it up phpMyAdmin: http://localhost:9000
+ 2.1. user: root
+ 2.2. password - MYSQL_ROOT_PASSWORD: 123456
  3. Import the database from the project folder /app/data/db/newshop.sql.zip
 
 
