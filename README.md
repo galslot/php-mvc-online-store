@@ -8,8 +8,8 @@
 
 
 ** Installation Instructions: **
- 1. git clone ssh://git@gitlab.sorq.org:2222/riga-devs-be/sorqpay.git
- 2. cd sorqpay
+ 1. git clone https://github.com/galslot/php-mvc-online-store.git
+ 2. cd php-mvc-online-store
  3. docker-compose build
  4. docker-compose up
  5. in a new tab: docker-compose exec php8 /bin/sh
